@@ -4,7 +4,6 @@ package object ConjuntosDifusos {
 
   def pertenece(elem: Int, s: ConjDifusos): Double = {
     s(elem)
-    //TODO HACER LA IMPLEMENTACION DE PERTENECE
   }
 
 
@@ -18,12 +17,12 @@ package object ConjuntosDifusos {
     mma
   }
 
-  //TODO COMO DEFINIR QUE UN NUEMERO ENTERO N ES GRANDE LA IDEA ES CALCULAR N/(N+D)
-  //TODO D  ES UN NUMERO MAYOR O IGUAL A 1
-  //TODO N/(N+D) ELEVADO A LA e
+  // COMO DEFINIR QUE UN NUEMERO ENTERO N ES GRANDE LA IDEA ES CALCULAR N/(N+D)
+  // ES UN NUMERO MAYOR O IGUAL A 1
+  // N/(N+D) ELEVADO A LA e
 
   def grande(d: Int, e: Int): ConjDifusos = {
-    //TODO HACER LA IMPLEMENTACION DE GRANDE
+
     def potencia(base: Double, expo: Int): Double = {
       if (expo == 0) 1.0
       else base * potencia(base, expo - 1)
@@ -49,7 +48,7 @@ package object ConjuntosDifusos {
   }
 
   def union(cd1: ConjDifusos, cd2: ConjDifusos): ConjDifusos = {
-    //TODO IMPLEMENTAR UNION
+
     def max(elem1: Int): Double = {
       if ( cd1(elem1) > cd2(elem1)) cd1(elem1)
       else  cd2(elem1)
