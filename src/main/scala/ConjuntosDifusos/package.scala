@@ -80,7 +80,12 @@ package object ConjuntosDifusos {
     }
   
     def igualdad (cd1: ConjDifusos, cd2: ConjDifusos):  Boolean ={
-      inclusion(cd1, cd2) && inclusion(cd2, cd1)
+      def interv (elem1: Int): Boolean = {
+        if (elem1 > 1000) true
+        else if (cd1(elem1) != cd2(elem1)) false
+        else interv(elem1 + 1)
+      }
+      interv(0)
     }
 
 
