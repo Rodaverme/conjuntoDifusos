@@ -1,5 +1,5 @@
 
-import ConjuntosDifusos.{ConjDifusos, complemento, grande, interseccion, muchoMayorQue, pertenece, union}
+import ConjuntosDifusos.{ConjDifusos, complemento, grande, interseccion, muchoMayorQue, pertenece, union, inclusion, igualdad}
 
 
 
@@ -79,3 +79,10 @@ pertenece(2,mm2_y_ca3)
 pertenece(4,mm2_y_ca3)
 pertenece(5,mm2_y_ca3)
 
+
+inclusion(mm2_y_ca3, mm2_o_ca3)
+inclusion(mm2, ca3)
+inclusion(ca3, mm2)
+inclusion(mm2, muchoMayorQue(3,7))
+inclusion(muchoMayorQue(3,7), mm2)
+igualdad (mm2_y_ca3, interseccion(ca3, mm2))
